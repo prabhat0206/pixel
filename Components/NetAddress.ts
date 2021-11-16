@@ -4,9 +4,9 @@ export const getLink = async (perPage: number = 30) => {
   const age = await AsyncStorage.getItem('age');
   if (age !== null) {
     if (parseInt(age) > 18) {
-      return `https://pixabay.com/api/?key=11444695-decde4774366bdb72fa4100ce&per_page=${perPage}`;
+      return `https://pixabay.com/api/?key=apikeye&per_page=${perPage}`;
     } else {
-      return `https://pixabay.com/api/?key=11444695-decde4774366bdb72fa4100ce&safesearch=true&per_page=${perPage}`;
+      return `https://pixabay.com/api/?key=apikey&safesearch=true&per_page=${perPage}`;
     }
   }
 };
